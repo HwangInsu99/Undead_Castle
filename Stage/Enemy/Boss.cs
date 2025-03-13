@@ -50,7 +50,7 @@ public class Boss : MonoBehaviour
             summon -= 1;
             StartCoroutine(BossSkill());
         }
-        //체력 설정은 코드밖에서 했다(3000,2000,1000,300)
+        //체력 설정은 유니티 프리펩(3000,2000,1000,300)
         if(health <= attackHp[attack])
         {
             attack += 1;
