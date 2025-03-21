@@ -19,6 +19,7 @@ public class Range : MonoBehaviour
             skills[index] = new List<GameObject>();
         }
     }
+    //원거리공격 인스턴스 생성
     public GameObject Fire(int index)
     {
         GameObject select = null;

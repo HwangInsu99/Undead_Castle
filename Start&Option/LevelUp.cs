@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//레벨업 캔버스 호출 및 최소화
 public class LevelUp : MonoBehaviour
 {
     RectTransform rect;
@@ -26,6 +27,7 @@ public class LevelUp : MonoBehaviour
         Time.fixedDeltaTime = 0.02F * Time.timeScale;
     }
 
+    //랜덤으로 3개를 뽑고 이미 강화된 항목이 뽑혔을 시 다시 뽑는다
     void Next()
     {
         foreach (Upgrade upgrade in upgrades)

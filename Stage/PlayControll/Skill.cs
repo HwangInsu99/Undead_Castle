@@ -44,7 +44,7 @@ public class Skill : MonoBehaviour
         effect = GetComponent<Effect>();
         player = GameObject.Find("Player").GetComponent<Player>();
     }
-    //업그레이드와 분노상태의 유무를 체크하여 스킬사용
+    //업그레이드와 분노상태의 유무를 체크하여 스킬사용, 데미지는 Player의 Power를 반영
     public void ActiveSkill(int x)
     {
         SfxManager.instance.PlaySfx(SfxManager.Sfx.Use);
@@ -112,6 +112,7 @@ public class Skill : MonoBehaviour
                 break;
         }
     }
+    //스킬의 동작시간만큼 공격범위 활성화 시간 및 사용횟수
     IEnumerator Attack(int x)
     {
         yield return null;

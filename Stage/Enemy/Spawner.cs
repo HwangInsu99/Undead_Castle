@@ -20,23 +20,18 @@ public class Spawner : MonoBehaviour
     int[] tStPer = { 0, 5, 5, 10, 15 };
     int[] golPer = { 0, 0, 5, 5, 5 };
     int[] gagPer = { 0, 0, 5, 5, 5 };
-    int zom;
-    int ske;
-    int sH;
-    int gob;
-    int sta;
-    int tSt;
-    int gol;
-    int gag;
+    int zom, ske, sH, gob, sta, tSt, gol, gag;
 
     void Update()
     {
         timer += Time.deltaTime;
         level = Mathf.FloorToInt(GameManager.instance.gameTime / 20);
+        //level = 나오는 몬스터의 종류
         if (level > 4)
         {
             level = 4;
         }
+        //웨이브 시작전 소환되지 않는 시간
         if (Mathf.FloorToInt(GameManager.instance.gameTime % 20) >= 15 && Mathf.FloorToInt(GameManager.instance.gameTime % 20) < 20)
         {
             timer = 0;

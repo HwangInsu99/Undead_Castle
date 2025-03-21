@@ -105,7 +105,7 @@ public class Monster : MonoBehaviour
         }
         else if (skill.mMUp && other.CompareTag("ExplodeR"))
             Damage(skill.RMagicDamage * 5);
-        //자폭병의 자폭데미지 코드를 실수로 Explode로 이름지어놓고 바꾸지않았음
+        //자폭병의 자폭데미지 코드는 Explode
         else if (other.CompareTag("SHSuicide"))
             Damage(30);
     }

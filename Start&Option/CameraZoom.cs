@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 //마우스휠로 플레이어쪽으로 확대 및 축소
 public class CameraZoom : MonoBehaviour
 {
