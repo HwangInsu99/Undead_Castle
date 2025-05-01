@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Skill : MonoBehaviour
@@ -35,8 +34,6 @@ public class Skill : MonoBehaviour
     public GameObject[] explode;
     public Transform explodeT;
     Vector3 et;
-
-
 
     private void Start()
     {

@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 //옵션캔버스 호출 및 최소화
 public class Option : MonoBehaviour
 {

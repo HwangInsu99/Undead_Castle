@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class Player : MonoBehaviour
 {
@@ -27,14 +25,9 @@ public class Player : MonoBehaviour
 
     ESword eSword;
     Animator anim;
-    SoundOptions soundOptions;
 
     void Awake()
     {
-        if (GameObject.Find("SoundManager") != null)
-        {
-            soundOptions = GameObject.Find("SoundManager").GetComponent<SoundOptions>();
-        }
         eSword = GetComponent<ESword>();
         HP = MHP;
         anim = GetComponent<Animator>();
@@ -127,21 +120,12 @@ public class Player : MonoBehaviour
     }
     public void PlayerDie()
     {
-        if (GameObject.Find("SoundManager") != null)
-        {
-            soundOptions.delete();
-        }
         Time.timeScale = 0.0f;
         dieRect.localScale = Vector3.one;
     }
     public void Clear()
     {
-        if (GameObject.Find("SoundManager") != null)
-        {
-            soundOptions.delete();
-        }
         Time.timeScale = 0.0f;
         clearRect.localScale = Vector3.one;
     }
 }
-

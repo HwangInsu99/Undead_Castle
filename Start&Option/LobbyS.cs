@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,14 +11,11 @@ public class LobbyS : MonoBehaviour
         if (GameObject.Find("StageSound") != null)
         {
             stageSound = GameObject.Find("StageSound").GetComponent<StageSound>();
+            stageSound.delete();
         }
     }
     public void ToStage()
     {
-        if (GameObject.Find("StageSound") != null)
-        {
-            stageSound.delete();
-        }
         SfxManager.instance.PlaySfx(SfxManager.Sfx.Button);
         SceneManager.LoadScene("Stage");
     }

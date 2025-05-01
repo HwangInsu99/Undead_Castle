@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -13,11 +11,18 @@ public class GameManager : MonoBehaviour
     public Player player;
     public Skill skill;
     public LevelUp uiLevelUp;
+    SoundOptions soundOptions;
+
 
     void Awake()
     {
         instance = this;
         maxGameTime = 2 * 59f;
+        if (GameObject.Find("SoundManager") != null)
+        {
+            soundOptions = GameObject.Find("SoundManager").GetComponent<SoundOptions>();
+            soundOptions.delete();
+        }
     }
 
     private void Update()

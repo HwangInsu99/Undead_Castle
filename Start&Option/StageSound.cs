@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 //옵션의 사운드를 참조해와서 게임의 소리조절(로비씬에서 조절한값과 연동)
 public class StageSound : MonoBehaviour
 {

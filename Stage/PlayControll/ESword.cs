@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 //근접스킬의 이펙트를 칼 위치에 맞춰서 나타냄

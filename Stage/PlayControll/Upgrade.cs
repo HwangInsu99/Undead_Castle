@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Upgrade : MonoBehaviour
 {
@@ -11,12 +8,6 @@ public class Upgrade : MonoBehaviour
     Skill skill;
     Player player;
     CardDataBase cardData;
-
-
-    Deck deck;
-
-    public int a;
-    public int b;
 
     private void Awake()
     {

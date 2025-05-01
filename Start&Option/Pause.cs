@@ -1,27 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 //일시정지 및 옵션
 public class Pause : MonoBehaviour
 {
     public RectTransform rect;
-    SoundOptions soundOptions;
-
-    private void Awake()
-    {
-        if (GameObject.Find("SoundManager") != null)
-        {
-            soundOptions = GameObject.Find("SoundManager").GetComponent<SoundOptions>();
-        }
-    }
 
     public void CallMenu()
     {
-        if (GameObject.Find("SoundManager") != null)
-        {
-            soundOptions.delete();
-        }
         SfxManager.instance.PlaySfx(SfxManager.Sfx.Button);
         rect.localScale = Vector3.one;
         Time.timeScale = 0.0f;
